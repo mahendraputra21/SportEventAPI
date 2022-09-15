@@ -41,8 +41,7 @@ namespace SportEventAPI.Controllers
             catch (Exception ex)
             {
                 _logger.Error(ex.StackTrace);
-                _logger.Error(ex.Message);
-                return BadRequest(ex.Message);
+                return BadRequest(ex.StackTrace);
             }
         }
 
