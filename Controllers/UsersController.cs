@@ -1,6 +1,5 @@
 ﻿using SportEventAPI.Features.Users.Command;
 using SportEventAPI.Features.Users.Query;
-using SportEventAPI.Features.Users.Query.Model;
 using SportEventAPI.Services;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -8,6 +7,7 @@ using Microsoft.Net.Http.Headers;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System;
+using NLog;
 
 namespace SportEventAPI.Controllers
 {
@@ -17,10 +17,12 @@ namespace SportEventAPI.Controllers
     {
 
         private readonly IMediator _mediator;
+        private readonly ILogger _logger;
 
         public userController(IMediator mediator)
         {
             _mediator = mediator;
+            _logger = LogManager.GetCurrentClassLogger();
         }
 
         /// <summary>
@@ -38,6 +40,8 @@ namespace SportEventAPI.Controllers
             }
             catch (Exception ex)
             {
+                _logger.Error(ex.StackTrace);
+                _logger.Error(ex.Message);
                 return BadRequest(ex.Message);
             }
         }
