@@ -19,13 +19,15 @@ namespace SportEventAPI
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+            //services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
             return services;
         }
     }
 
-
-
+    /// <summary>
+    /// 
+    /// </summary>
     public class Startup
     {
         public Startup(IConfiguration configuration)
