@@ -11,7 +11,6 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.IO;
 using System.Reflection;
-using static SportEventAPI.Services.LoginCommand;
 
 namespace SportEventAPI
 {
@@ -21,6 +20,7 @@ namespace SportEventAPI
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
             services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
             return services;
         }
     }
@@ -47,7 +47,7 @@ namespace SportEventAPI
             services.AddScoped<IOrganizerService, OrganizerService>();
             services.AddScoped<ISportEventService, SportEventService>();
 
-            services.AddAutoMapper(typeof(Startup));
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo 
