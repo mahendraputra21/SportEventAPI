@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SportEventAPI</name>
+    </assembly>
+    <members>
+        <member name="M:SportEventAPI.Controllers.organizerController.Get(System.Int32,System.Int32)">
+            <summary>
+            getAllOrganizers
+            </summary>
+            <param name="page"></param>
+            <param name="perPage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SportEventAPI.Controllers.organizerController.Get(System.Int32)">
+            <summary>
+            getOrganizer
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SportEventAPI.Controllers.organizerController.Post(SportEventAPI.Features.Organizer.Command.OrganizersCommand)">
+            <summary>
+            createOrganizer
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SportEventAPI.Controllers.organizerController.Put(System.Int32,SportEventAPI.Features.Organizer.Command.OrganizersCommand)">
+            <summary>
+            updateOrganizer
+            </summary>
+            <param name="id"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SportEventAPI.Controllers.organizerController.Delete(System.Int32)">
+            <summary>
+            deleteOrganizer
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SportEventAPI.Controllers.SportEventController.Get(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            getAllSportEvents
+            </summary>
+            <param name="page"></param>
+            <param name="perPage"></param>
+            <param name="organizerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SportEventAPI.Controllers.SportEventController.Get(System.Int32)">
+            <summary>
+            getSportEvent
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SportEventAPI.Controllers.SportEventController.Post(SportEventAPI.Features.SportEvents.Command.SportEventCommand)">
+            <summary>
+            createSportEvent
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SportEventAPI.Controllers.SportEventController.Put(System.Int32,SportEventAPI.Features.SportEvents.Command.SportEventCommand)">
+            <summary>
+            updateSportEvent
+            </summary>
+            <param name="id"></param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SportEventAPI.Controllers.SportEventController.Delete(System.Int32)">
+            <summary>
+            deleteSportEvent
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SportEventAPI.Controllers.userController.LoginUser(SportEventAPI.Services.LoginCommand)">
+            <summary>
+            loginUser
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SportEventAPI.Controllers.userController.CreateUser(SportEventAPI.Services.RegisterCommand)">
+            <summary>
+            createUser
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SportEventAPI.Controllers.userController.Get(System.Int32)">
+            <summary>
+            getUser
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SportEventAPI.Controllers.userController.Put(SportEventAPI.Features.Users.Command.UpdateUserCommand,System.Int32)">
+            <summary>
+            updateUser
+            </summary>
+            <param name="createUserRequest"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SportEventAPI.Controllers.userController.Delete(System.Int32)">
+            <summary>
+            deleteUser
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SportEventAPI.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
