@@ -7,7 +7,7 @@ using Microsoft.Net.Http.Headers;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System;
-using NLog;
+
 
 namespace SportEventAPI.Controllers
 {
@@ -17,12 +17,10 @@ namespace SportEventAPI.Controllers
     {
 
         private readonly IMediator _mediator;
-        private readonly ILogger _logger;
 
         public userController(IMediator mediator)
         {
             _mediator = mediator;
-            _logger = LogManager.GetCurrentClassLogger();
         }
 
         /// <summary>
@@ -40,8 +38,7 @@ namespace SportEventAPI.Controllers
             }
             catch (Exception ex)
             {
-                _logger.Error(ex.StackTrace);
-                return BadRequest(ex.StackTrace);
+                return BadRequest( ex.Message + " \n" + ex.InnerException + "  \n " + ex.StackTrace);
             }
         }
 
