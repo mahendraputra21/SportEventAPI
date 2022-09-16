@@ -7,7 +7,7 @@ using Microsoft.Net.Http.Headers;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System;
-
+using SportEventAPI.Models;
 
 namespace SportEventAPI.Controllers
 {
@@ -38,7 +38,7 @@ namespace SportEventAPI.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.InnerException);
+                return BadRequest(new ResponseFailed(ex.InnerException));
             }
         }
 
