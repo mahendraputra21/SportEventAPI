@@ -38,7 +38,7 @@ namespace SportEventAPI.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest( ex.Message + " \n" + ex.InnerException + "  \n " + ex.StackTrace);
+                return BadRequest(ex.InnerException);
             }
         }
 
